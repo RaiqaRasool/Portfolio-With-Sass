@@ -1,0 +1,58 @@
+@include media-md{
+    .menu-btn{
+        display: none;
+    }
+    .nav{
+        &-menu{
+            top:0;
+            flex-direction: row;
+            width:100%;
+            height: auto;
+            background-color: transparent;
+            justify-content: flex-end;
+       
+            &-item{
+                display: inline-block;
+                padding-right: 1.5rem;
+                transform: translateX(0);
+            }
+            &-link{
+                font-size:1.5rem; 
+                text-transform: capitalize;
+                font-weight: 400;
+
+            }
+        }
+    }
+
+    .about__bio{
+        font-size:1.5rem;
+    }
+
+    .projects{
+        &__bio-image{
+            height: 40vh;
+        }
+        &-items{
+            grid-template-columns: repeat(2,1fr);
+
+        }
+        .text-secondary{
+            font-size: 3rem;
+        }
+    }
+}
+
+
+@include media-lg{
+    .projects{
+        &-items{
+            grid-template-columns: repeat(3,1fr);
+        }
+    }
+    .projects__bio-image{
+        height: 50vh;
+    }
+    
+}
+

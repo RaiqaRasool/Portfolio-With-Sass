@@ -1,0 +1,87 @@
+.projects{
+    padding-bottom:2rem;
+
+    &__bio-image{
+        height: 30vh;
+        width: 100%;
+        background: linear-gradient(to right,
+        rgba(0,0,0,0.9),
+        rgba(0,0,0,0.3)), url("../img/model-1.jpg") center top;
+        background-size: cover;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: column;
+
+        .text-secondary{
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }  
+    
+        
+    }
+
+    &-items{
+        width:60vw;
+        margin:2rem auto 0 auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap:2rem;
+    }
+
+    &-item{
+        position:relative;
+        border-bottom: 5px solid $secondary-color;
+        overflow:hidden;
+        cursor: pointer;
+
+        img{
+            width:100%;
+        }
+    
+
+    &::after{
+        content:"";
+        position: absolute;
+        top:100%;
+        left:0;
+        height: 100%;
+        width:100%;
+        background-color: $secondary-color;
+        opacity: 0;
+    }
+
+    &:hover{
+        &::after{
+            top:0;
+            opacity:0.9;
+            transition: all 0.5s linear;
+        }
+        .projects-btn{
+            opacity: 1;
+        }
+    }    
+}
+
+&-btns{
+    position: absolute;
+    top:0;
+    height:100%;
+    width:100%;
+    z-index:1;
+    display:flex;
+    justify-content: space-around;
+    align-items:center;
+    text-align:center;
+}
+&-btn{
+    opacity:0;
+    color:set-text-color($secondary-color);
+    font-size:1.2rem;
+
+    &:hover{
+        color:set-text-color(set-text-color($secondary-color));
+    }
+}
+
+}
