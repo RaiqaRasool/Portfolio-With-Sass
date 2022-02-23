@@ -2,7 +2,7 @@
 
 Developing this portfolio to practice my sass skills
 
-Have  a look at the live site at https://raiqarasool.github.io/Portfolio-With-Sass/
+Have  a look at the live site at https://raiqarasool.github.io/Portfolio-With-Sass/dist/
 
 Learnt and practiced:
 
