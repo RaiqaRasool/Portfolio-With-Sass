@@ -18,9 +18,11 @@ fetch_changes:
 
 build:
   stage: build
+  needs: [fetch_changes]
   script: 
     - echo "Building Project"
 test:
   stage: test
+  needs: [fetch_changes, build]
   script:
     - echo "Testing Project"
