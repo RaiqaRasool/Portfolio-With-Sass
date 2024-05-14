@@ -1,6 +1,6 @@
 # Portfolio-With-Sass
 
-Developing this portfolio to practice my sass skills
+Developed this portfolio to practice my sass skills
 
 Have  a look at the live site at https://raiqarasool.github.io/Portfolio-With-Sass/dist/
 
