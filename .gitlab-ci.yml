@@ -1,0 +1,26 @@
+stages:
+  - fetch_changes
+  - build
+  - test
+
+fetch_changes:
+  stage: fetch_changes
+  before_script:
+    - git config --global user.email "${GITLAB_USER_EMAIL}"
+    - git config --global user.name "${GITLAB_USER_NAME}"
+  script:
+    - git remote add github $UPSTREAM_URL
+    - git config pull.rebase true
+    - git checkout main
+    - git pull origin main
+    - git pull github main
+    - git push https://oauth2:$PROJECT_ACCESS_TOKEN@$CI_SERVER_HOST/$CI_PROJECT_PATH.git HEAD:main
+
+build:
+  stage: build
+  script: 
+    - echo "Building Project"
+test:
+  stage: test
+  script:
+    - echo "Testing Project"
