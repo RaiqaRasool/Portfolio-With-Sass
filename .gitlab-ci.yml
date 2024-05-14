@@ -14,7 +14,7 @@ fetch_changes:
     - git checkout main
     - git pull origin main
     - git pull github main
-    - git push https://oauth2:$PROJECT_ACCESS_TOKEN@$CI_SERVER_HOST/$CI_PROJECT_PATH.git HEAD:main
+    - git push https://oauth2:$PROJECT_ACCESS_TOKEN@$CI_SERVER_HOST/$CI_PROJECT_PATH.git HEAD:main -o ci.skip
 
 build:
   stage: build
