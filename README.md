@@ -1,2 +1,2 @@
 # Portfolio-With-Sass
-Developing this portfolio to practice my sass skills
+Developing this portfolio to practice my sass skills further
